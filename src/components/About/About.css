@@ -1,0 +1,32 @@
+.about-container {
+  display: block;
+}
+
+.about-content .section-title {
+  margin-bottom: 1.5rem;
+}
+
+.about-description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-highlights li {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 992px) {
+  .about-container {
+    display: block;
+  }
+}
+

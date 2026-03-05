@@ -1,0 +1,115 @@
+.projects {
+  background-color: transparent;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.project-card.reverse {
+  /* No actual flex-direction reverse needed since we use grid and alternate via auto-placement or specific columns.
+   * But wait, we can just switch the order for CSS grid by defining grid-template-areas or using flex.
+   * Actually, let's use flex for easier reversal or just grid order.
+   */
+}
+
+/* Let's redefine project-card to use flexbox for easier reversal */
+.project-card {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.project-card > * {
+  flex: 1;
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-info h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-tags .tag {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.link-with-icon svg {
+  transition: var(--transition);
+}
+
+.link-with-icon:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.project-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: var(--transition);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .project-card, .project-card.reverse {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}

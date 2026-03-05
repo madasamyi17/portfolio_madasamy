@@ -1,0 +1,98 @@
+.leadership {
+  background-color: transparent;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.leadership-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.leadership-carousel {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.9rem;
+}
+
+.leadership-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.leadership-image-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  background: var(--bg-color);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 1rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: rgba(17, 24, 32, 0.8);
+  color: var(--text-primary);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.carousel-btn.prev {
+  left: 0.55rem;
+}
+
+.carousel-btn.next {
+  right: 0.55rem;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: var(--border-color);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--accent-color);
+}
+
+.leadership-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.leadership-card p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 992px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+}
