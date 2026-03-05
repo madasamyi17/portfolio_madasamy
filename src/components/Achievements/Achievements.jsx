@@ -1,12 +1,13 @@
 import React from 'react';
 import './Achievements.css';
 import { achievements } from '../../constants/portfolioData';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 const Achievements = () => {
   return (
     <section className="section achievements" id="achievements">
       <div className="container">
-        <h2 className="section-title">Achievements</h2>
+        <SectionHeading heading="Achievements" />
 
         <div className="achievements-grid">
           {achievements.map((achievement) => (

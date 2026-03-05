@@ -1,12 +1,13 @@
 import React from 'react';
 import './Experience.css';
 import { experiences } from '../../constants/portfolioData';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 const Experience = () => {
   return (
     <section className="section experience" id="experience">
       <div className="container">
-        <h2 className="section-title">Experience</h2>
+        <SectionHeading heading="Experience" />
 
         <div className="experience-grid">
           {experiences.map((experience) => (
@@ -14,7 +15,7 @@ const Experience = () => {
               <div className="experience-video-wrap">
                 {experience.videoUrl ? (
                   <video controls className="experience-video">
-                    <source src={experience.videoUrl} type="video/mp4" />
+                    <source src={experience.videoUrl} type="image/png" />
                   </video>
                 ) : (
                   <div className="experience-video-placeholder">

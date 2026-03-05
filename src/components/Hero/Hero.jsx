@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 // import profileImage from '../../assets/profile.jpg';
-import profileImage from '../../assets/canva_profile_3.png';
+import profileImage from '../../assets/PROFILE_FINAL.png';
 import { personalInfo } from '../../constants/portfolioData';
 
 const Hero = () => {

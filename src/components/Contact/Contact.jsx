@@ -1,13 +1,14 @@
 import React from 'react';
 import './Contact.css';
 import { personalInfo } from '../../constants/portfolioData';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 const Contact = () => {
   return (
     <section className="section contact" id="contacts">
       <div className="container contact-container">
         <div className="contact-info">
-          <p className="contact-subtitle">Contact</p>
+          <SectionHeading heading="Contact" align="left" />
           <h2 className="contact-title">Let's build something meaningful.</h2>
           <a href={`mailto:${personalInfo.email}`} className="btn btn-primary submit-btn-large">Email Me</a>
         </div>

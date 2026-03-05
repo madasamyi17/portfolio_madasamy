@@ -1,5 +1,8 @@
+import githubContributions from '../assets/github.png';
+import clgweb from '../assets/clgweb.png';
+
 export const personalInfo = {
-  name: 'MADASAMY I',
+  name: 'MADASAMY I;',
   shortName: 'Madasamy I',
   role: 'Aspiring Software Engineer',
   heroSubtitle: 'Aspiring Software Engineer',
@@ -82,7 +85,7 @@ export const experiences = [
     company: 'ACGCET Official Website Team',
     stack: ['React JS', 'Express JS', 'MySQL', 'AWS'],
     liveLink: 'https://accet.ac.in',
-    videoUrl: '',
+    videoUrl: clgweb,
     points: [
       'Developed and maintained key modules of the ACGCET official website, including Semester Results for Part-Time and M.E. students, with secure authentication and role-based access.',
       'Managed deployment on AWS Lightsail, integrated S3/SES/CDN, automated CI/CD with GitHub Actions, and resolved critical backend and security issues.',
@@ -133,7 +136,7 @@ export const achievements = [
     highlight: '1.2K Contributions This Year',
     description:
       'Consistent daily coding and open-source activity across personal and collaborative repositories.',
-    image: '/github-contributions.png',
+    image: githubContributions,
   },
   {
     id: 2,

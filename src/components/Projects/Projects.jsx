@@ -2,12 +2,13 @@ import React from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 import './Projects.css';
 import { projects } from '../../constants/portfolioData';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 const Projects = () => {
   return (
     <section className="section projects" id="projects">
       <div className="container">
-        <h2 className="section-title">Projects</h2>
+        <SectionHeading heading="Projects" />
         
         <ul className="projects-grid">
           {projects.map((project, index) => (

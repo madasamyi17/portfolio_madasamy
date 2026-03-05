@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import './Leadership.css';
 import { leadershipHighlights } from '../../constants/portfolioData';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 const Leadership = () => {
   const initialIndexes = useMemo(
@@ -21,7 +22,7 @@ const Leadership = () => {
   return (
     <section className="section leadership" id="leadership">
       <div className="container">
-        <h2 className="section-title">Leadership & Volunteering</h2>
+        <SectionHeading heading="Leadership & Volunteering" />
 
         <div className="leadership-grid">
           {leadershipHighlights.map((item) => {
