@@ -41,6 +41,7 @@
 
 .contact-form {
   padding-left: 2rem;
+  width: 100%;
 }
 
 .contact-details {
@@ -48,6 +49,12 @@
   border: 1px solid var(--border-color);
   border-radius: 14px;
   padding: 1.3rem;
+  width: 100%;
+}
+
+.contact-form form .btn {
+  width: 100%;
+  text-align: center;
 }
 
 .form-group {
@@ -124,7 +131,24 @@
 }
 
 @media (max-width: 768px) {
+  .contact {
+    padding-bottom: 5rem;
+  }
+
+  .contact-info {
+    text-align: left;
+  }
+
   .contact-title {
     font-size: 2.1rem;
+  }
+
+  .submit-btn-large {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-details {
+    padding: 1rem;
   }
 }

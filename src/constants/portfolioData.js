@@ -1,8 +1,10 @@
 import githubContributions from '../assets/github.png';
 import clgweb from '../assets/clgweb.png';
+import movieGuesserImage from '../assets/movieguesser.png';
+import chatbotImage from '../assets/chatbot.png';
 
 export const personalInfo = {
-  name: 'MADASAMY I;',
+  name: 'MADASAMY I',
   shortName: 'Madasamy I',
   role: 'Aspiring Software Engineer',
   heroSubtitle: 'Aspiring Software Engineer',
@@ -82,10 +84,10 @@ export const experiences = [
   {
     id: 1,
     title: 'ACGCET Website Team Member',
-    company: 'ACGCET Official Website Team',
+    company: 'accet.ac.in',
     stack: ['React JS', 'Express JS', 'MySQL', 'AWS'],
     liveLink: 'https://accet.ac.in',
-    videoUrl: clgweb,
+    imageUrl: clgweb,
     points: [
       'Developed and maintained key modules of the ACGCET official website, including Semester Results for Part-Time and M.E. students, with secure authentication and role-based access.',
       'Managed deployment on AWS Lightsail, integrated S3/SES/CDN, automated CI/CD with GitHub Actions, and resolved critical backend and security issues.',
@@ -100,8 +102,7 @@ export const projects = [
     tags: ['React JS', 'Express JS', 'MySQL', 'AWS'],
     description:
       'Built an interactive movie guessing game with a dynamic question flow and real-time scoring logic for engaging gameplay.',
-    image:
-      'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
+    image: movieGuesserImage,
     githubLink: 'https://github.com/madasamy_dfan',
     demoLink: '#',
   },
@@ -111,8 +112,7 @@ export const projects = [
     tags: ['Python', 'FAISS', 'LLM', 'RAG'],
     description:
       'Developed a knowledge-retrieval chatbot for ACCET content using FAISS-based vector indexing and context-aware responses.',
-    image:
-      'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
+    image: chatbotImage,
     githubLink: 'https://github.com/madasamy_dfan',
     demoLink: '#',
   },

@@ -19,8 +19,6 @@
 .section-heading-lines {
   margin-top: 0.8rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
 }
 
 .line {
@@ -32,11 +30,6 @@
 .line-primary {
   width: 88px;
   background-color: var(--accent-color);
-}
-
-.line-secondary {
-  width: 62px;
-  background-color: #000000;
 }
 
 @media (max-width: 768px) {
@@ -54,10 +47,6 @@
 
   .line-primary {
     width: 70px;
-  }
-
-  .line-secondary {
-    width: 52px;
   }
 }
 

@@ -12,21 +12,31 @@ const Experience = () => {
         <div className="experience-grid">
           {experiences.map((experience) => (
             <article className="experience-card" key={experience.id}>
-              <div className="experience-video-wrap">
-                {experience.videoUrl ? (
-                  <video controls className="experience-video">
-                    <source src={experience.videoUrl} type="image/png" />
-                  </video>
+              <div className="experience-media-wrap">
+                {experience.imageUrl ? (
+                  <img
+                    src={experience.imageUrl}
+                    alt={`${experience.title} preview`}
+                    className="experience-media"
+                    loading="lazy"
+                  />
                 ) : (
-                  <div className="experience-video-placeholder">
-                    Add your experience demo video URL in constants
+                  <div className="experience-media-placeholder">
+                    Add your experience preview image URL in constants
                   </div>
                 )}
               </div>
 
               <div className="experience-content">
                 <h3>{experience.title}</h3>
-                <p className="experience-company">{experience.company}</p>
+                <a
+                  href={experience.liveLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="experience-company experience-company-link"
+                >
+                  {experience.company}
+                </a>
 
                 <div className="experience-tags">
                   {experience.stack.map((item) => (

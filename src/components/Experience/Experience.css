@@ -17,20 +17,20 @@
   padding: 1.25rem;
 }
 
-.experience-video-wrap {
+.experience-media-wrap {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border-color);
   min-height: 250px;
 }
 
-.experience-video {
+.experience-media {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.experience-video-placeholder {
+.experience-media-placeholder {
   display: grid;
   place-items: center;
   height: 100%;
@@ -49,6 +49,14 @@
 .experience-company {
   color: var(--text-secondary);
   margin-bottom: 0.85rem;
+}
+
+.experience-company-link {
+  display: inline-block;
+}
+
+.experience-company-link:hover {
+  color: var(--accent-color);
 }
 
 .experience-tags {

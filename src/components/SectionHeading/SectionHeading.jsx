@@ -7,7 +7,6 @@ const SectionHeading = ({ heading, align = 'center' }) => {
       <h2 className="section-heading-title">{heading}</h2>
       <div className="section-heading-lines" aria-hidden="true">
         <span className="line line-primary" />
-        <span className="line line-secondary" />
       </div>
     </div>
   );
