@@ -1,24 +1,38 @@
 import githubContributions from '../assets/github.png';
 import clgweb from '../assets/clgweb.png';
 import movieGuesserImage from '../assets/movieguesser.png';
-import chatbotImage from '../assets/chatbot.png';
+import chatbotImage from '../assets/chatbot2.png';
 
+import comparing1 from '../assets/COMPARING1.jpeg';
+import comparing2 from '../assets/COMPARING2.jpeg';
+import comparing3 from '../assets/COMPARING3.jpeg';
+
+import freshers1 from '../assets/FRESHERS2.jpeg';
+import freshers2 from '../assets/PYWORKSHOP.jpeg';
+import freshers3 from '../assets/PYTHONWORKSHOP.jpeg';
+import freshers4 from '../assets/FRESHERS1.png';
+
+import pc from '../assets/PC.jpeg';
+import webteam from '../assets/clgweb.png';
+import symp from '../assets/kurukshetra.png';
+import codemaster from '../assets/codemaster.png'
+import webteammember from '../assets/webteammember.jpeg';
 export const personalInfo = {
-  name: 'MADASAMY I',
+  name: 'MADASAMY I;',
   shortName: 'Madasamy I',
   role: 'Aspiring Software Engineer',
   heroSubtitle: 'Aspiring Software Engineer',
   profileSummary:
     'Aspiring software engineer with skills in full-stack development, problem-solving, and critical thinking. Known for effective communication and leadership abilities. Passionate about innovative software solutions and continuous learning.',
-  location: 'Suthamalli, Tirunelveli',
+  location: 'Tirunelveli',
   phone: '+91 9080192315',
   email: 'madasamyi2006@gmail.com',
-  portfolio: 'https://itzinr.vercel.app',
+  portfolio: 'https://madasamyi.me',
   resumeUrl: '/resume.pdf',
   links: {
-    linkedin: 'https://www.linkedin.com/in/madasamy_dfan',
-    github: 'https://github.com/madasamy_dfan',
-    leetcode: 'https://leetcode.com/madasamy_fan',
+    linkedin: 'https://www.linkedin.com/in/madasamyi',
+    github: 'https://github.com/madasamyi17',
+    leetcode: 'https://leetcode.com/madasamyi',
   },
 };
 
@@ -48,11 +62,13 @@ export const technicalSkills = [
   { name: 'JavaScript', icon: 'javascript' },
   { name: 'React JS', icon: 'react' },
   { name: 'Express JS', icon: 'express' },
-  { name: 'Spring Boot', icon: 'spring' },
+  { name: 'FastAPI', icon: 'fastapi' },
   { name: 'MySQL', icon: 'mysql' },
   { name: 'Git', icon: 'git' },
   { name: 'GitHub', icon: 'github' },
   { name: 'GitHub Actions', icon: 'github-actions' },
+  { name: 'PuTTY', icon: 'putty' },
+  { name: 'WinSCP', icon: 'winscp' },
   { name: 'AWS', icon: 'aws' },
 ];
 
@@ -62,21 +78,21 @@ export const leadershipHighlights = [
     title: 'Placement Coordinator - CSE Department',
     description:
       'Serving as Placement Coordinator for the CSE department for three years, supporting placement activities, communication, and student coordination.',
-    images: ['/leadership-placement-1.jpg', '/leadership-placement-2.jpg'],
+    images: [pc],
   },
   {
     id: 2,
     title: 'Freshers Association Coordinator',
     description:
       'Coordinating freshers association activities at ACCET, conducting workshops, organizing events, and contributing to media and documentation.',
-    images: ['/leadership-freshers-1.jpg', '/leadership-freshers-2.jpg'],
+    images: [freshers1, freshers2, freshers3, freshers4],
   },
   {
     id: 3,
     title: 'Anchoring & Public Speaking',
     description:
       'Anchored multiple college cultural events and developed strong public speaking and stage communication skills.',
-    images: ['/leadership-anchoring-1.jpg', '/leadership-anchoring-2.jpg'],
+    images: [comparing1, comparing2,comparing3],
   },
 ];
 
@@ -87,7 +103,7 @@ export const experiences = [
     company: 'accet.ac.in',
     stack: ['React JS', 'Express JS', 'MySQL', 'AWS'],
     liveLink: 'https://accet.ac.in',
-    imageUrl: clgweb,
+    imageUrls: [clgweb, webteammember],
     points: [
       'Developed and maintained key modules of the ACGCET official website, including Semester Results for Part-Time and M.E. students, with secure authentication and role-based access.',
       'Managed deployment on AWS Lightsail, integrated S3/SES/CDN, automated CI/CD with GitHub Actions, and resolved critical backend and security issues.',
@@ -144,7 +160,7 @@ export const achievements = [
     highlight: "Deftra'25 - Code Quest",
     description:
       'Won CODE MASTER 2025 award for consistent performance in Code Quest.',
-    image: '',
+    image: codemaster,
   },
   {
     id: 3,
@@ -152,6 +168,6 @@ export const achievements = [
     highlight: 'College Symposium Wins',
     description:
       'Participated in and won various college symposiums, including CEG Kurukshetra and many more.',
-    image: '',
+    image: symp,
   },
 ];

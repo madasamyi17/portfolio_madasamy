@@ -39,29 +39,6 @@
   padding: 1rem;
 }
 
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid var(--border-color);
-  background: rgba(17, 24, 32, 0.8);
-  color: var(--text-primary);
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-}
-
-.carousel-btn.prev {
-  left: 0.55rem;
-}
-
-.carousel-btn.next {
-  right: 0.55rem;
-}
-
 .carousel-dots {
   display: flex;
   gap: 0.4rem;

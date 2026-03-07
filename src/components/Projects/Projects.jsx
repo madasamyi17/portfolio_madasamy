@@ -12,7 +12,7 @@ const Projects = () => {
         
         <ul className="projects-grid">
           {projects.map((project, index) => (
-            <li className={`project-card ${index % 2 !== 0 ? 'reverse' : ''}`} key={project.id}>
+            <li className={`project-card reveal-card ${index % 2 !== 0 ? 'reverse' : ''}`} key={project.id}>
               <div className="project-info">
                 <h3>{project.title}</h3>
                 <div className="project-tags">

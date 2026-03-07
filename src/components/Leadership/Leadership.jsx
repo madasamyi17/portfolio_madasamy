@@ -1,5 +1,4 @@
-import React, { useMemo, useState } from 'react';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import React, { useEffect, useMemo, useState } from 'react';
 import './Leadership.css';
 import { leadershipHighlights } from '../../constants/portfolioData';
 import SectionHeading from '../SectionHeading/SectionHeading';
@@ -12,12 +11,22 @@ const Leadership = () => {
 
   const [activeIndexes, setActiveIndexes] = useState(initialIndexes);
 
-  const updateSlide = (id, step, total) => {
-    setActiveIndexes((prev) => ({
-      ...prev,
-      [id]: (prev[id] + step + total) % total,
-    }));
-  };
+  useEffect(() => {
+    const timers = leadershipHighlights
+      .filter((item) => item.images && item.images.length > 1)
+      .map((item) =>
+        setInterval(() => {
+          setActiveIndexes((prev) => ({
+            ...prev,
+            [item.id]: ((prev[item.id] ?? 0) + 1) % item.images.length,
+          }));
+        }, 3000)
+      );
+
+    return () => {
+      timers.forEach((timer) => clearInterval(timer));
+    };
+  }, []);
 
   return (
     <section className="section leadership" id="leadership">
@@ -31,7 +40,7 @@ const Leadership = () => {
             const currentImage = hasImages ? item.images[currentIndex] : '';
 
             return (
-              <article className="leadership-card" key={item.id}>
+              <article className="leadership-card reveal-card" key={item.id}>
                 <div className="leadership-carousel">
                   {hasImages ? (
                     <img src={currentImage} alt={item.title} className="leadership-image" />
@@ -39,24 +48,6 @@ const Leadership = () => {
                     <div className="leadership-image-placeholder">Add your leadership images in constants</div>
                   )}
 
-                  {hasImages && item.images.length > 1 ? (
-                    <>
-                      <button
-                        className="carousel-btn prev"
-                        aria-label="Previous image"
-                        onClick={() => updateSlide(item.id, -1, item.images.length)}
-                      >
-                        <FiChevronLeft />
-                      </button>
-                      <button
-                        className="carousel-btn next"
-                        aria-label="Next image"
-                        onClick={() => updateSlide(item.id, 1, item.images.length)}
-                      >
-                        <FiChevronRight />
-                      </button>
-                    </>
-                  ) : null}
                 </div>
 
                 {hasImages && item.images.length > 1 ? (

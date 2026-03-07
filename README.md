@@ -1,16 +1,37 @@
-# React + Vite
+# Portfolio (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Run Frontend
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Contact Form Mail API (Nodemailer)
 
-## React Compiler
+This project includes a backend endpoint at `POST /api/contact` powered by Express + Nodemailer.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Create a `.env` file in the project root based on `.env.example`.
+2. Fill these values:
 
-## Expanding the ESLint configuration
+```env
+PORT=5000
+SMTP_SERVICE=gmail
+CONTACT_EMAIL=your_email@gmail.com
+CONTACT_PASSKEY=your_app_password
+CONTACT_RECEIVER_EMAIL=your_receiver_email@gmail.com
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Start backend:
+
+```bash
+npm run server
+```
+
+4. Start frontend in another terminal:
+
+```bash
+npm run dev
+```
+
+Vite proxies `/api/*` requests to `http://localhost:5000` during development.

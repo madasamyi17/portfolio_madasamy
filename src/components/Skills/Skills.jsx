@@ -24,18 +24,20 @@ const iconMap = {
   javascript: FaJs,
   react: FaReact,
   express: FaNodeJs,
-  spring: FaLeaf,
+  fastapi: FaLeaf,
   mysql: FaDatabase,
   git: FaGitAlt,
   github: FaGithub,
   'github-actions': FaCogs,
+  putty: FaCogs,
+  winscp: FaCogs,
   aws: FaCloud,
 };
 
 const groupedSkillNames = {
   'Programming Languages': ['Java', 'Python', 'C', 'JavaScript'],
-  'Frameworks and Backend': ['React JS', 'Express JS', 'Spring Boot', 'MySQL'],
-  'Tools and Cloud': ['Git', 'GitHub', 'GitHub Actions', 'AWS'],
+  'Frameworks and Backend': ['React JS', 'Express JS', 'FastAPI', 'MySQL'],
+  'Tools and Cloud': ['Git', 'GitHub', 'GitHub Actions', 'PuTTY', 'WinSCP', 'AWS'],
 };
 
 const Skills = () => {
@@ -60,7 +62,7 @@ const Skills = () => {
                     const Icon = iconMap[skill.icon] || FaCode;
 
                     return (
-                      <article className="skill-card" key={skill.name}>
+                      <article className="skill-card reveal-card" key={skill.name}>
                         <span className="skill-icon" aria-hidden="true">
                           <Icon />
                         </span>

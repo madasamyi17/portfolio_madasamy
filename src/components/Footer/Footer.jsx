@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container footer-container">
-        <h3 className="footer-logo">{personalInfo.name}</h3>
+        <h3 className="footer-logo">MADASAMY I</h3>
         <p className="copyright">Built by {personalInfo.shortName}. All rights reserved.</p>
         
         <div className="social-links">

@@ -29,6 +29,26 @@
   object-fit: cover;
 }
 
+.achievement-carousel-dots {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  margin: 0 0 0.8rem;
+}
+
+.achievement-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: var(--border-color);
+  cursor: pointer;
+}
+
+.achievement-dot.active {
+  background: var(--accent-color);
+}
+
 .achievement-card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
